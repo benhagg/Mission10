@@ -14,6 +14,27 @@ interface Bowler {
 }
 
 export default function App() {
+  return (
+    <>
+      <Heading />
+      <Table />
+    </>
+  );
+}
+
+const Heading = () => {
+  return (
+    <>
+      <h1 style={{ textAlign: "center", margin: "20px 0" }}>Bowling League</h1>
+      <p>
+        This table shows all the bowlers in the bowling league database on the
+        Marlins and Sharks teams
+      </p>
+    </>
+  );
+};
+
+function Table() {
   const [bowlers, setBowlers] = useState<Bowler[]>([]);
 
   useEffect(() => {
